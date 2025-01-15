@@ -117,9 +117,12 @@ switch ($action) {
             fwrite($log_file, "Member ID: {$mb_id}\n");
         }
 
-        // 회원 포인트 조회
-        $query = "SELECT mb_id, mb_point FROM {$g5['member_table']} 
-                 WHERE mb_id = '" . mysqli_real_escape_string($g5['connect_db'], $mb_id) . "'";
+        // 회원 포인트 조회 - g5_point 테이블에서 최신 포인트 가져오기
+        $query = "SELECT p.po_mb_point as total_point 
+                 FROM {$g5['point_table']} p
+                 WHERE p.mb_id = '" . mysqli_real_escape_string($g5['connect_db'], $mb_id) . "'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1";
         
         if ($log_file !== false) {
             fwrite($log_file, "Query: {$query}\n");
@@ -139,32 +142,21 @@ switch ($action) {
             break;
         }
 
-        $member = mysqli_fetch_assoc($result);
-        
-        if ($member) {
-            $total_points = (int)$member['mb_point'];
+        $point_data = mysqli_fetch_assoc($result);
+        $total_points = $point_data ? (int)$point_data['total_point'] : 0;
             
-            if ($log_file !== false) {
-                fwrite($log_file, "Member points: {$total_points}\n");
-            }
-            
-            echo json_encode([
-                'success' => true,
-                'data' => [
-                    'bnb_balance' => '0',
-                    'aidas_balance' => $total_points,
-                    'token_fee' => '0'
-                ]
-            ]);
-        } else {
-            if ($log_file !== false) {
-                fwrite($log_file, "Member not found with ID: {$mb_id}\n");
-            }
-            echo json_encode([
-                'success' => false,
-                'message' => 'Member not found'
-            ]);
+        if ($log_file !== false) {
+            fwrite($log_file, "Member points from g5_point: {$total_points}\n");
         }
+            
+        echo json_encode([
+            'success' => true,
+            'data' => [
+                'bnb_balance' => '0',
+                'aidas_balance' => $total_points,
+                'token_fee' => '0'
+            ]
+        ]);
         break;
 
     default:
