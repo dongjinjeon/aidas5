@@ -355,3 +355,53 @@ Final Session Data: Array
 
 Final Member ID: 287941a5cb
 === End of Request ===
+
+=== 2025-01-15 14:23:25 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 14:23:32 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Existing member logged in: 287941a5cb
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+Final Member ID: 287941a5cb
+=== End of Request ===
