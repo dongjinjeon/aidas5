@@ -632,3 +632,339 @@ Query: SELECT mb_id, mb_point FROM g5_member
                  WHERE mb_id = '287941a5cb'
 Member points: 500
 === End of Request ===
+
+=== 2025-01-15 12:27:22 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:31:09 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:31:10 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:34:16 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:34:17 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:35:34 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===
+
+=== 2025-01-15 12:35:35 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT p.po_mb_point as total_point 
+                 FROM g5_point p
+                 WHERE p.mb_id = '287941a5cb'
+                 ORDER BY p.po_datetime DESC 
+                 LIMIT 1
+Member points from g5_point: 0
+=== End of Request ===

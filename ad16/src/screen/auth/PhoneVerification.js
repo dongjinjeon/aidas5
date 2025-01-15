@@ -5,6 +5,7 @@ import Header from '../../component/common/Header';
 import axios from 'axios';
 import { API_URL } from '../../config/config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const PhoneVerification = ({ navigation }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -72,6 +73,7 @@ const PhoneVerification = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <View style={styles.headerBackground} />
             <Header title="휴대폰 인증" />
             <View style={styles.content}>
                 <Text style={styles.description}>
@@ -121,6 +123,16 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+    },
+    headerBackground: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '50%',
+        height: (20 + getStatusBarHeight()) / 2,
+        backgroundColor: '#00A3B4',
+        zIndex: -1,
     },
     content: {
         flex: 1,
