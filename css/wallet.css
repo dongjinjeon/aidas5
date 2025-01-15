@@ -1,0 +1,274 @@
+/* 지갑 컨테이너 */
+.wallet-container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 지갑 정보 섹션 */
+.wallet-info {
+    background: linear-gradient(135deg, #00BFA5 0%, #00897B 100%);
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.wallet-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wallet-header h2 {
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.poten-balance {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.security-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* BNB 지갑 카드 */
+.wallet-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.wallet-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.token-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.balance-info {
+    color: #333;
+}
+
+.balance {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.token-fee {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 실적 정보 섹션 */
+.performance-info {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.performance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.view-details {
+    color: #00BFA5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.performance-stats {
+    margin-bottom: 20px;
+}
+
+.partner-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.performance-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.detail-item .value {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* 보상받기 섹션 */
+.rewards-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rewards-section h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reward-item:hover {
+    transform: translateY(-2px);
+}
+
+.reward-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.reward-info {
+    flex: 1;
+}
+
+.reward-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.reward-desc {
+    font-size: 14px;
+    color: #666;
+}
+
+.reward-arrow {
+    color: #00BFA5;
+    font-weight: bold;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reward-animation {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.coin-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url('/img/coin.png') no-repeat center;
+    background-size: contain;
+}
+
+.reward-amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00BFA5;
+    margin-top: 15px;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00BFA5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background: #00897B;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .wallet-container {
+        padding: 15px;
+    }
+
+    .poten-balance {
+        font-size: 28px;
+    }
+
+    .performance-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

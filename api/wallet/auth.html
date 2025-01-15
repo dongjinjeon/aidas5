@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIDAS Wallet - Google Login</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            word-break: break-all;
+        }
+        .success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .error {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIDAS Wallet</h1>
+        <div id="g_id_onload"
+             data-client_id="YOUR_GOOGLE_CLIENT_ID"
+             data-context="signin"
+             data-callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-shape="rectangular"
+             data-logo_alignment="left">
+        </div>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://cmxeczvjzibtwvdagvmx.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNteGVjenZqemlidHd2ZGFndm14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU3ODc2OTYsImV4cCI6MjA1MTM2MzY5Nn0.PuA4SJ5lMKnPCUXk9v_fJTgJPy0vZ947oryp1lHln98';
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function handleCredentialResponse(response) {
+            const responseDiv = document.getElementById('response');
+            try {
+                // Google에서 받은 ID 토큰으로 Supabase 인증
+                const { data, error } = await supabase.auth.signInWithIdToken({
+                    provider: 'google',
+                    token: response.credential
+                });
+
+                if (error) throw error;
+
+                // 성공적으로 로그인
+                responseDiv.className = 'success';
+                responseDiv.textContent = '로그인 성공! Access Token: ' + data.session.access_token;
+
+                // 토큰을 로컬 스토리지에 저장
+                localStorage.setItem('access_token', data.session.access_token);
+                localStorage.setItem('refresh_token', data.session.refresh_token);
+
+            } catch (error) {
+                responseDiv.className = 'error';
+                responseDiv.textContent = '오류 발생: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

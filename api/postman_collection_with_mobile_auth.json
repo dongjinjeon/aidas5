@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "mobile-auth-collection",
+		"name": "Wallet API with Mobile Auth",
+		"description": "모바일 인증(Supabase 구글 로그인)을 포함한 지갑 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Google OAuth",
+			"item": [
+				{
+					"name": "1. Get Auth URL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://accounts.google.com/o/oauth2/v2/auth?client_id={{client_id}}&redirect_uri=http://localhost/aidas3/api/auth/google_signin.php&response_type=code&scope=email profile&access_type=offline&prompt=consent",
+							"protocol": "https",
+							"host": [
+								"accounts",
+								"google",
+								"com"
+							],
+							"path": [
+								"o",
+								"oauth2",
+								"v2",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://localhost/aidas3/api/auth/google_signin.php"
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "email profile"
+								},
+								{
+									"key": "access_type",
+									"value": "offline"
+								},
+								{
+									"key": "prompt",
+									"value": "consent"
+								}
+							]
+						},
+						"description": "1. Send 버튼 클릭\n2. 응답 URL을 브라우저에서 열기\n3. Google 로그인 후 리디렉션된 URL에서 code 파라미터 복사"
+					},
+					"response": []
+				},
+				{
+					"name": "2. Exchange Code for Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}"
+								},
+								{
+									"key": "code",
+									"value": "{{auth_code}}"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://localhost/aidas3/api/auth/google_signin.php"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://oauth2.googleapis.com/token",
+							"protocol": "https",
+							"host": [
+								"oauth2",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"token"
+							]
+						},
+						"description": "인증 코드를 액세스 토큰으로 교환"
+					},
+					"response": []
+				},
+				{
+					"name": "3. Get User Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "https://www.googleapis.com/oauth2/v3/userinfo",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"oauth2",
+								"v3",
+								"userinfo"
+							]
+						},
+						"description": "액세스 토큰으로 사용자 정보 조회"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3eGpjYXBwc2Jub2NyeWxoaGR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDQ5NDUzOTgsImV4cCI6MjAyMDUyMTM5OH0.DGYZxhOx0kLYGsOw_H2YE4XT_UZSqDHwjs_6W_UYJWM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://rwxjcappsbnocrylhhdw.supabase.co/auth/v1/user",
+							"protocol": "https",
+							"host": [
+								"rwxjcappsbnocrylhhdw",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"auth",
+								"v1",
+								"user"
+							]
+						},
+						"description": "Supabase 사용자 프로필 조회"
+					}
+				},
+				{
+					"name": "Sync Supabase User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supabase_uid\": \"your_supabase_user_id\",\n    \"email\": \"user@example.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/aidas3/api/auth/sync_supabase_user.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"auth",
+								"sync_supabase_user.php"
+							]
+						},
+						"description": "Supabase 사용자 정보를 그누보드와 동기화"
+					}
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"webcgi\",\n    \"current_password\": \"ko21188\",\n    \"new_password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/aidas3/api/auth/change_password.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"auth",
+								"change_password.php"
+							]
+						},
+						"description": "회원 비밀번호 변경"
+					}
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "Get Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aidas3/api/wallet/balance.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"wallet",
+								"balance.php"
+							]
+						},
+						"description": "지갑 잔액 조회"
+					}
+				},
+				{
+					"name": "Get Daily Rewards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aidas3/api/wallet/rewards.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"wallet",
+								"rewards.php"
+							]
+						},
+						"description": "일일 보상 받기"
+					}
+				},
+				{
+					"name": "Get Referral Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aidas3/api/wallet/referral.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"wallet",
+								"referral.php"
+							]
+						},
+						"description": "추천인 정보 조회"
+					}
+				},
+				{
+					"name": "Get Transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{supabase_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aidas3/api/wallet/transactions.php?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aidas3",
+								"api",
+								"wallet",
+								"transactions.php"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "거래 내역 조회"
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost",
+			"type": "string"
+		},
+		{
+			"key": "client_id",
+			"value": "424653529603-p92ptgcsl4hhh3mq6obu09evt7dcp2kq.apps.googleusercontent.com",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "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",
+			"type": "string"
+		},
+		{
+			"key": "auth_code",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "supabase_url",
+			"value": "https://cmxeczvjzibtwvdagvmx.supabase.co",
+			"type": "string"
+		},
+		{
+			"key": "supabase_key",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNteGVjenZqemlidHd2ZGFndm14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU3ODc2OTYsImV4cCI6MjA1MTM2MzY5Nn0.PuA4SJ5lMKnPCUXk9v_fJTgJPy0vZ947oryp1lHln98",
+			"type": "string"
+		}
+	]
+}
