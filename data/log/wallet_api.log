@@ -1,0 +1,634 @@
+
+=== 2025-01-15 11:38:18 ===
+Request Method: POST
+Headers: Array
+(
+    [User-Agent] => okhttp/4.9.1
+    [Accept-Encoding] => gzip
+    [Connection] => close
+    [Host] => 172.30.1.42
+    [Content-Length] => 164
+    [Content-Type] => multipart/form-data; boundary=b3584227-fd63-4c4a-9eda-90d2847c20b8
+    [Accept] => application/json
+)
+
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+)
+
+Action: get_balance
+Error: No session found
+=== End of Request ===
+
+=== 2025-01-15 11:40:39 ===
+Request Method: POST
+Headers: Array
+(
+    [User-Agent] => okhttp/4.9.1
+    [Cookie] => G53aidas4PHPSESSID=3b20mec9rm7makhc3ju1mm6g0a; 2a0d2363701f23f8a75028924a3af643=MTcyLjMwLjEuNDI%3D
+    [Accept-Encoding] => gzip
+    [Connection] => close
+    [Host] => 172.30.1.42
+    [Content-Length] => 164
+    [Content-Type] => multipart/form-data; boundary=3321f4c4-a199-4844-831b-267c58f6699b
+    [Accept] => application/json
+)
+
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Action: get_balance
+Member ID: 
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = ''
+Member not found
+=== End of Request ===
+
+=== 2025-01-15 11:40:40 ===
+Request Method: POST
+Headers: Array
+(
+    [User-Agent] => okhttp/4.9.1
+    [Cookie] => G53aidas4PHPSESSID=3b20mec9rm7makhc3ju1mm6g0a; 2a0d2363701f23f8a75028924a3af643=MTcyLjMwLjEuNDI%3D
+    [Accept-Encoding] => gzip
+    [Connection] => close
+    [Host] => 172.30.1.42
+    [Content-Length] => 164
+    [Content-Type] => multipart/form-data; boundary=054ef78e-6881-4a6d-a406-713d2d1673b7
+    [Accept] => application/json
+)
+
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Action: get_balance
+Member ID: 
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = ''
+Member not found
+=== End of Request ===
+
+=== 2025-01-15 11:44:40 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Action: get_balance
+Member ID: 
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = ''
+Member not found with ID: 
+=== End of Request ===
+
+=== 2025-01-15 11:44:41 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Action: get_balance
+Member ID: 
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = ''
+Member not found with ID: 
+=== End of Request ===
+
+=== 2025-01-15 11:45:52 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+=== End of Request ===
+
+=== 2025-01-15 11:46:55 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Transferred 2500 points from admin
+Transferred 1500 points from bj77
+Transferred 700 points from RichardBaek
+Transferred 100 points from Martin
+Transferred 1300 points from khyong
+Transferred 1500 points from ujo
+Transferred 200 points from como
+Transferred 500 points from webcgi
+Transferred 400 points from kingdom
+Transferred 200 points from cnnn1
+Transferred 600 points from tazan7286
+Transferred 400 points from playgorilla
+Transferred 900 points from giant
+Transferred 200 points from msjun8970
+Transferred 500 points from sbjang77
+Transferred 400 points from love0
+Transferred 1500 points from kacter2179
+Transferred 900 points from raum4760
+Transferred 700 points from k2244286
+Transferred 400 points from kns6782
+Transferred 800 points from ami8502
+Transferred 200 points from ysmiou
+Transferred 600 points from kjj1092
+Transferred 1500 points from kookim99
+Transferred 200 points from daringman
+Transferred 200 points from pbchan68
+Transferred 100 points from mijung1223
+Transferred 300 points from Woals0621
+Transferred 100 points from oo4401
+Transferred 400 points from oo7533
+Transferred 200 points from kun814
+Transferred 100 points from sa3569
+Transferred 100 points from jiwon00
+Transferred 200 points from minyi2000
+Transferred 200 points from qudy4444
+Transferred 500 points from ok92
+Transferred 100 points from oja333
+Transferred 100 points from iambback
+Transferred 900 points from cnksky76
+Transferred 200 points from Kwtcmc
+Transferred 100 points from nasbang
+Transferred 100 points from parkjaejung
+Transferred 100 points from sook6195
+Transferred 100 points from onhwa00
+Transferred 800 points from civil048
+Transferred 900 points from berngo
+Transferred 100 points from chjsun73
+Transferred 200 points from alaskapingk
+Transferred 1300 points from msjun89700
+Transferred 200 points from kahn3535
+Transferred 500 points from hye224
+Transferred 800 points from kjyoon17
+Transferred 700 points from babjo056
+Transferred 100 points from hsLEE8624
+Transferred 100 points from pinsu33
+Transferred 100 points from marimba108
+Transferred 200 points from gsyoung6124
+Transferred 100 points from jbcom8178
+Transferred 1100 points from indra2184
+Transferred 400 points from dbswnfk
+Transferred 100 points from susie3535
+Transferred 100 points from banada33
+Transferred 700 points from pro22
+Transferred 400 points from sonej64
+Transferred 600 points from yang20523
+Transferred 800 points from dayeon1004
+Transferred 100 points from danielh624
+Transferred 300 points from tmxkeja12
+Transferred 100 points from ilias
+Transferred 100 points from jm3035
+Transferred 100 points from Alsldl45
+Transferred 300 points from akkk84
+Transferred 200 points from macutha29
+Transferred 100 points from lindvall36
+Transferred 100 points from diabler
+Transferred 700 points from roadmix
+Transferred 100 points from hss
+Transferred 100 points from leopold
+Transferred 400 points from hiway
+Transferred 100 points from Nflkmy
+Transferred 100 points from pok0190
+Transferred 200 points from kk0524
+Transferred 800 points from wing
+Transferred 500 points from ch45kr
+Transferred 100 points from littlesilver
+Transferred 200 points from clotilda
+Transferred 100 points from 1kimjs1
+Transferred 100 points from phillahr
+Transferred 400 points from louiskoo
+Transferred 400 points from king
+Transferred 100 points from YOU720529
+Transferred 200 points from pkb9086
+Transferred 100 points from kgyun
+Transferred 100 points from asaa57
+Transferred 100 points from kk88
+Transferred 100 points from josimhae77
+Updated total points for 287941a5cb: 39500
+=== End of Request ===
+
+=== 2025-01-15 11:46:56 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Updated total points for 287941a5cb: 39500
+=== End of Request ===
+
+=== 2025-01-15 11:52:12 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 39500
+=== End of Request ===
+
+=== 2025-01-15 11:52:13 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 39500
+=== End of Request ===
+
+=== 2025-01-15 11:56:23 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 500
+=== End of Request ===
+
+=== 2025-01-15 11:56:24 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 500
+=== End of Request ===
+
+=== 2025-01-15 11:56:33 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 500
+=== End of Request ===
+
+=== 2025-01-15 11:56:41 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => get_balance
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Action: get_balance
+Error: No session found
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Cookie Data: Array
+(
+    [G53aidas4PHPSESSID] => 3b20mec9rm7makhc3ju1mm6g0a
+    [2a0d2363701f23f8a75028924a3af643] => MTcyLjMwLjEuNDI=
+)
+
+Found member by phone: 287941a5cb
+Member ID: 287941a5cb
+Query: SELECT mb_id, mb_point FROM g5_member 
+                 WHERE mb_id = '287941a5cb'
+Member points: 500
+=== End of Request ===

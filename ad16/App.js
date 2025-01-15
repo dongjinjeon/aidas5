@@ -57,34 +57,15 @@ export default function App() {
             <StatusBar hidden={false} backgroundColor={'#ffff'} barStyle={'dark-content'}/>
             <NavigationContainer>
                 <Stack.Navigator 
-                    initialRouteName="WelcomeModal"
+                    initialRouteName="PhoneVerification"
                     screenOptions={{
                         headerShown: false
                     }}
                 >
                 
                     <Stack.Screen 
-                        name="WelcomeModal"
-                        component={WelcomeModalScreen}
-                        options={{ 
-                            presentation: 'transparentModal',
-                        }}
-                    />
-                    <Stack.Screen 
-                        name="Splash" 
-                        component={Splash}
-                    />
-                    <Stack.Screen 
-                        name="Welcome" 
-                        component={WelcomeScreen}
-                    />
-                    <Stack.Screen 
-                        name="StartScreen" 
-                        component={StartScreen}
-                    />
-                    <Stack.Screen 
-                        name="LanguageSelect" 
-                        component={LanguageSelect}
+                        name="PhoneVerification" 
+                        component={PhoneVerification}
                         options={{ headerShown: true }}
                     />
                     <Stack.Screen 
@@ -100,11 +81,6 @@ export default function App() {
                     <Stack.Screen 
                         name="UserInfo" 
                         component={UserInfoScreen}
-                        options={{ headerShown: true }}
-                    />
-                    <Stack.Screen 
-                        name="PhoneVerification" 
-                        component={PhoneVerification}
                         options={{ headerShown: true }}
                     />
                     <Stack.Screen 
@@ -154,6 +130,30 @@ export default function App() {
                         name="TokenTransfer"
                         component={TokenTransferScreen}
                         options={{ headerShown: false }}
+                    />
+                    <Stack.Screen 
+                        name="WelcomeModal"
+                        component={WelcomeModalScreen}
+                        options={{ 
+                            presentation: 'transparentModal',
+                        }}
+                    />
+                    <Stack.Screen 
+                        name="Splash" 
+                        component={Splash}
+                    />
+                    <Stack.Screen 
+                        name="Welcome" 
+                        component={WelcomeScreen}
+                    />
+                    <Stack.Screen 
+                        name="StartScreen" 
+                        component={StartScreen}
+                    />
+                    <Stack.Screen 
+                        name="LanguageSelect" 
+                        component={LanguageSelect}
+                        options={{ headerShown: true }}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

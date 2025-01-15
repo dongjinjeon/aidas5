@@ -1,21 +1,73 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../component/common/Header';
+import axios from 'axios';
+import { API_URL } from '../../config/config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const PhoneVerification = ({ navigation }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [verificationCode, setVerificationCode] = useState('');
     const [isCodeSent, setIsCodeSent] = useState(false);
 
-    const handleSendCode = () => {
-        // Add your verification code sending logic here
-        setIsCodeSent(true);
+    const handleSendCode = async () => {
+        if (!phoneNumber) {
+            Alert.alert('알림', '휴대폰 번호를 입력해주세요.');
+            return;
+        }
+
+        try {
+            const formData = new FormData();
+            formData.append('action', 'send_code');
+            formData.append('phone', phoneNumber);
+
+            const response = await axios.post(`${API_URL}/auth/check_member.php`, formData);
+            console.log('Send code response:', response.data);
+
+            if (response.data.success) {
+                setIsCodeSent(true);
+                Alert.alert('알림', '인증번호가 전송되었습니다.');
+            } else {
+                Alert.alert('오류', response.data.message || '인증번호 전송에 실패했습니다.');
+            }
+        } catch (error) {
+            console.error('Send code error:', error);
+            Alert.alert('오류', '인증번호 전송 중 오류가 발생했습니다.');
+        }
     };
 
-    const handleVerifyCode = () => {
-        // Add your verification logic here
-        navigation.navigate('CreatePin');
+    const handleVerifyCode = async () => {
+        if (!verificationCode) {
+            Alert.alert('알림', '인증번호를 입력해주세요.');
+            return;
+        }
+
+        try {
+            const formData = new FormData();
+            formData.append('action', 'verify_code');
+            formData.append('phone', phoneNumber);
+            formData.append('code', verificationCode);
+
+            const response = await axios.post(`${API_URL}/auth/check_member.php`, formData);
+            console.log('Verify code response:', response.data);
+
+            if (response.data.success) {
+                // 인증 성공 시 전화번호 저장
+                await AsyncStorage.setItem('userPhone', phoneNumber);
+                
+                // WalletMain 화면으로 이동
+                navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'WalletMain' }],
+                });
+            } else {
+                Alert.alert('오류', response.data.message || '인증번호가 일치하지 않습니다.');
+            }
+        } catch (error) {
+            console.error('Verify code error:', error);
+            Alert.alert('오류', '인증 중 오류가 발생했습니다.');
+        }
     };
 
     return (
@@ -119,4 +171,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default PhoneVerification; 
+export default PhoneVerification;

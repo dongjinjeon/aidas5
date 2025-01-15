@@ -1,0 +1,269 @@
+
+=== 2025-01-15 11:40:20 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 11:40:27 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 123456
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+)
+
+Verifying code for 01039300111: 123456
+Session code: 1234
+
+=== 2025-01-15 11:40:39 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Creating new member: 287941a5cb
+SQL: INSERT INTO g5_member 
+                   SET mb_id = '287941a5cb',
+                       mb_hp = '01039300111',
+                       mb_datetime = '2025-01-15 11:40:39',
+                       mb_ip = '172.30.1.42'
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+=== End of Request ===
+
+=== 2025-01-15 11:44:34 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 11:44:40 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Existing member logged in: 287941a5cb
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+Final Member ID: 287941a5cb
+=== End of Request ===
+
+=== 2025-01-15 11:46:48 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 11:46:55 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Existing member logged in: 287941a5cb
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+Final Member ID: 287941a5cb
+=== End of Request ===
+
+=== 2025-01-15 11:52:06 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 11:52:12 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Existing member logged in: 287941a5cb
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+Final Member ID: 287941a5cb
+=== End of Request ===
+
+=== 2025-01-15 11:56:17 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => send_code
+    [phone] => 01039300111
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Generated verification code for 01039300111: 1234
+=== End of Request ===
+
+=== 2025-01-15 11:56:23 ===
+Request Method: POST
+POST Data: Array
+(
+    [action] => verify_code
+    [phone] => 01039300111
+    [code] => 1234
+)
+
+Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 
+)
+
+Verifying code for 01039300111: 1234
+Session code: 1234
+Existing member logged in: 287941a5cb
+Final Session Data: Array
+(
+    [ss_is_mobile] => 
+    [verify_code] => 1234
+    [verify_phone] => 01039300111
+    [ss_mb_id] => 287941a5cb
+)
+
+Final Member ID: 287941a5cb
+=== End of Request ===

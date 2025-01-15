@@ -16,7 +16,7 @@ const PinScreen = ({ navigation }) => {
             
             if (newPin.length === 6) {
                 setTimeout(() => {
-                    navigation.navigate('PinSuccess');
+                    navigation.navigate('WalletMain');
                 }, 200);
             }
         }

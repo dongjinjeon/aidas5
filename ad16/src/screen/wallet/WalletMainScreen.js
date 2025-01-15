@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { API_URL } from '../../config/config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // 보상 금액 상수
 const REWARDS = {
@@ -20,20 +21,55 @@ export default function WalletMainScreen({ navigation }) {
 
     useEffect(() => {
         getWalletBalance();
-    }, []);
+        // 화면이 포커스를 받을 때마다 잔액 갱신
+        const unsubscribe = navigation.addListener('focus', () => {
+            getWalletBalance();
+        });
+
+        return unsubscribe;
+    }, [navigation]);
 
     const getWalletBalance = async () => {
         try {
             const formData = new FormData();
             formData.append('action', 'get_balance');
-
-            const response = await axios.post(`${API_URL}/wallet_api.php`, formData);
             
-            if (response.data.success) {
-                setWalletData(response.data.data);
+            // 전화번호가 있다면 함께 전송
+            const phone = await AsyncStorage.getItem('userPhone');
+            if (phone) {
+                formData.append('phone', phone);
+            }
+
+            console.log('Fetching balance from:', `${API_URL}/wallet_api.php`);
+            
+            const response = await axios.post(`${API_URL}/wallet_api.php`, formData, {
+                withCredentials: true,
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'Accept': 'application/json'
+                }
+            });
+            
+            console.log('API Response:', response.data);
+            
+            if (response.data && response.data.success) {
+                const balance = response.data.data.aidas_balance || '0';
+                console.log('Setting balance:', balance);
+                
+                setWalletData({
+                    bnb_balance: '0',
+                    token_fee: '0',
+                    aidas_balance: balance.toString()
+                });
+            } else {
+                const errorMsg = response.data ? response.data.message : 'Unknown error';
+                console.error('API Error:', errorMsg);
             }
         } catch (error) {
-            console.error('Failed to fetch wallet balance:', error);
+            console.error('Network Error:', error.message);
+            if (error.response) {
+                console.error('Error Response:', error.response.data);
+            }
         }
     };
 

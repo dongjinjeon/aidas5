@@ -1,1 +1,1 @@
-export const API_URL = 'https://your-api-domain.com/api';  // API 서버 주소를 여기에 입력하세요
+export const API_URL = 'http://172.30.1.42/aidas4/api';  // 로컬 서버 API 주소
